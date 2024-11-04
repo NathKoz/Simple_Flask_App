@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Examples in Python, C#, and Rust</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Examples</h1>
+        <p>Select a language and a concept to see an example:</p>
+        
+        <form method="POST">
+            <!-- Language Selection -->
+            <label for="language">Choose a language:</label>
+            <select name="language" id="language">
+                <option value="python" {% if selected_language == "python" %}selected{% endif %}>Python</option>
+                <option value="csharp" {% if selected_language == "csharp" %}selected{% endif %}>C#</option>
+                <option value="rust" {% if selected_language == "rust" %}selected{% endif %}>Rust</option>
+            </select>
+
+            <!-- Keyword Selection -->
+            <label for="keyword">Choose a concept:</label>
+            <select name="keyword" id="keyword">
+                <option value="print" {% if selected_keyword == "print" %}selected{% endif %}>Print</option>
+                <option value="input" {% if selected_keyword == "input" %}selected{% endif %}>Input</option>
+                <option value="loop" {% if selected_keyword == "loop" %}selected{% endif %}>Loop</option>
+            </select>
+            <button type="submit">Show Example</button>
+        </form>
+
+        <!-- Code Block -->
+        {% if example_code %}
+        <div class="code-block {{ selected_language }}">
+            <h2>Example Code for "{{ selected_keyword }}" in {{ selected_language.capitalize() }}</h2>
+            <pre>{{ example_code }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

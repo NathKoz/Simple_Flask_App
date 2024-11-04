@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a19f9f;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin: 20px 0;
+}
+
+select, label {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.code-block {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* Color themes for each language */
+.code-block.python {
+    background-color: #306998; /* Python Blue/Yellow */
+    color: #d8c453;
+}
+
+.code-block.csharp {
+    background-color: #593874; /* C# Purple/White */
+    color: #fff;
+}
+
+.code-block.rust {
+    background-color: #975935; /* Rust Reddish-Orange */
+    color: #000000;
+}
+
+pre {
+    white-space: pre-wrap;
+    font-size: 14px;
+}
